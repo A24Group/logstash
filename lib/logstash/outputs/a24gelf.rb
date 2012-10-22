@@ -5,7 +5,7 @@ require "logstash/outputs/base"
 # to output events to graylog2.
 #
 # More information at <http://www.graylog2.org/about/gelf>
-class LogStash::Outputs::Gelf < LogStash::Outputs::Base
+class LogStash::Outputs::A24gelf < LogStash::Outputs::Base
 
   config_name "a24gelf"
   plugin_status "beta"
