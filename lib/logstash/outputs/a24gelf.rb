@@ -57,17 +57,17 @@ class LogStash::Outputs::A24gelf < LogStash::Outputs::Base
 
     #@gelf = GELF::Notifier.new(@host, @port, @chunksize, option_hash)
     @gelf = GELF::Notifier.new(@host, @port, @chunksize)
-#		@gelf.collect_file_and_line = false
-#		@gelf.level_mapping = {
-#			0 => 0,
-#			1 => 1,
-#			2 => 2,
-#			3 => 3,
-#			4 => 4,
-#			5 => 5,
-#			6 => 6,
-#			7 => 7
-#		}
+		@gelf.collect_file_and_line = false
+		@gelf.level_mapping = {
+			0 => 0,
+			1 => 1,
+			2 => 2,
+			3 => 3,
+			4 => 4,
+			5 => 5,
+			6 => 6,
+			7 => 7
+		}
     # This sets the 'log level' of gelf; since we're forwarding messages, we'll
     # want to forward *all* messages, so set level to 0 so all messages get
     # shipped
